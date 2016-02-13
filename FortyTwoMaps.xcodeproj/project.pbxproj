@@ -15,7 +15,9 @@
 		5CC782351C6F42C6008E000B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC782331C6F42C6008E000B /* LaunchScreen.storyboard */; };
 		5CC782401C6F42C6008E000B /* FortyTwoMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7823F1C6F42C6008E000B /* FortyTwoMapsTests.swift */; };
 		5CC7824B1C6F42C6008E000B /* FortyTwoMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7824A1C6F42C6008E000B /* FortyTwoMapsUITests.swift */; };
-		5CC782591C6F4367008E000B /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC782581C6F4367008E000B /* loading_screen.png */; };
+		A64E1A361C6F69480001A0E1 /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = A64E1A351C6F69480001A0E1 /* loading_screen.png */; };
+		A64E1A3E1C6F97E50001A0E1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A3D1C6F97E50001A0E1 /* TableViewCell.swift */; };
+		A64E1A421C6F9F790001A0E1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A411C6F9F790001A0E1 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		5CC782461C6F42C6008E000B /* FortyTwoMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortyTwoMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC7824A1C6F42C6008E000B /* FortyTwoMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyTwoMapsUITests.swift; sourceTree = "<group>"; };
 		5CC7824C1C6F42C6008E000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CC782581C6F4367008E000B /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen.png; path = ../../loading_screen.png; sourceTree = "<group>"; };
+		A64E1A351C6F69480001A0E1 /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen.png; path = ../../../Downloads/loading_screen.png; sourceTree = "<group>"; };
+		A64E1A3D1C6F97E50001A0E1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A64E1A411C6F9F790001A0E1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 		5CC782271C6F42C6008E000B /* FortyTwoMaps */ = {
 			isa = PBXGroup;
 			children = (
-				5CC782581C6F4367008E000B /* loading_screen.png */,
+				A64E1A411C6F9F790001A0E1 /* TableViewController.swift */,
+				A64E1A351C6F69480001A0E1 /* loading_screen.png */,
 				5CC782281C6F42C6008E000B /* AppDelegate.swift */,
 				5CC7822A1C6F42C6008E000B /* FirstViewController.swift */,
 				5CC7822C1C6F42C6008E000B /* SecondViewController.swift */,
 				5CC7822E1C6F42C6008E000B /* Main.storyboard */,
+				A64E1A3D1C6F97E50001A0E1 /* TableViewCell.swift */,
 				5CC782311C6F42C6008E000B /* Assets.xcassets */,
 				5CC782331C6F42C6008E000B /* LaunchScreen.storyboard */,
 				5CC782361C6F42C6008E000B /* Info.plist */,
@@ -237,7 +243,7 @@
 			files = (
 				5CC782351C6F42C6008E000B /* LaunchScreen.storyboard in Resources */,
 				5CC782321C6F42C6008E000B /* Assets.xcassets in Resources */,
-				5CC782591C6F4367008E000B /* loading_screen.png in Resources */,
+				A64E1A361C6F69480001A0E1 /* loading_screen.png in Resources */,
 				5CC782301C6F42C6008E000B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC7822D1C6F42C6008E000B /* SecondViewController.swift in Sources */,
+				A64E1A3E1C6F97E50001A0E1 /* TableViewCell.swift in Sources */,
 				5CC782291C6F42C6008E000B /* AppDelegate.swift in Sources */,
+				A64E1A421C6F9F790001A0E1 /* TableViewController.swift in Sources */,
 				5CC7822B1C6F42C6008E000B /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +498,7 @@
 				5CC782511C6F42C6008E000B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CC782521C6F42C6008E000B /* Build configuration list for PBXNativeTarget "FortyTwoMapsTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +507,7 @@
 				5CC782541C6F42C6008E000B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CC782551C6F42C6008E000B /* Build configuration list for PBXNativeTarget "FortyTwoMapsUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +516,7 @@
 				5CC782571C6F42C6008E000B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

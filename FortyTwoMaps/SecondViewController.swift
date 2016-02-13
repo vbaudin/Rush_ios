@@ -9,15 +9,16 @@
 import UIKit
 
 class SecondViewController: UITableViewController {
-
+    
+    @IBOutlet weak var test: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
-        
+        //self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -41,5 +42,13 @@ class SecondViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(indexPath.row == 0)
+        {
+            test.text = "asdasd"
+        }
+    }
+    
 }
 
