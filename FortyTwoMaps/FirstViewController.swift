@@ -18,9 +18,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var LocationManager = CLLocationManager()
     var UpdateLoc = CLLocationCoordinate2D()
     
-    /*let yolo: [cellClass] = [
-        cellClass(title: "Ecole 42", subtitle: "CyberCafe", latitude: 48.896831, longitude: 2.318766),
-        cellClass(title: "Maison de Vacance", subtitle: "Limonade et Rhum Coco", latitude: 43.329337, longitude: 5.098494)]*/
+    var rowSelect:Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +27,30 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         LocationManager.desiredAccuracy = kCLLocationAccuracyBest
         LocationManager.requestAlwaysAuthorization()
         LocationManager.startUpdatingLocation()
-        Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 0, longitude: 0), CLLocationDistance(100), CLLocationDistance(400)), animated: true)
-        //let fortyTwo = MKPointAnnotation()
-        /*for item in yolo
+        if (rowSelect != -1)
         {
-            fortyTwo.coordinate = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
-            fortyTwo.title = item.title
-            fortyTwo.subtitle = item.subtitle
-            Map.addAnnotation(fortyTwo)
-        }*/
+            Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: yolo[rowSelect].latitude, longitude: yolo[rowSelect].longitude), CLLocationDistance(100), CLLocationDistance(400)), animated: true)
+        }else
+        {
+            Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 43, longitude: 8), CLLocationDistance(3000000), CLLocationDistance(3000000)), animated: true)
+        }
+        var i : Int = 0
+        while i < yolo.count
+        {
+            var tmp = MKPointAnnotation()
+            tmp.coordinate = CLLocationCoordinate2D(latitude: yolo[i].latitude, longitude: yolo[i].longitude)
+            tmp.title = yolo[i].title
+            tmp.subtitle = yolo[i].subtitle
+            if (rowSelect == i)
+            {
+                Map.addAnnotation(tmp)
+            }
+            if (rowSelect == -1)
+            {
+                Map.addAnnotation(tmp)
+            }
+            i++
+        }
         Map.showsUserLocation = true
     }
 

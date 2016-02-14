@@ -9,10 +9,6 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
-    let yolo: [cellClass] = [
-    cellClass(title: "Ecole 42", subtitle: "CyberCafe", latitude: 48.896831, longitude: 2.318766),
-    cellClass(title: "Maison de Vacance", subtitle: "Limonade et Rhum Coco", latitude: 43.329337, longitude: 5.098494)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,27 +34,28 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.yolo.count
+        return yolo.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Loc", forIndexPath: indexPath)
-        //cell.textLabel?.text = yolo[indexPath.row].title
+        let cell = tableView.dequeueReusableCellWithIdentifier("locCell", forIndexPath: indexPath) as! locCell
+        cell.aa.text = yolo[indexPath.row].title
+        cell.imgM.image = UIImage(named: "img" + String(indexPath.row))
         // Configure the cell...
 
         return cell
     }
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if (segue.identifier == "mapSegue")
         {
             let indexPath = tableView.indexPathForSelectedRow!
             let view = segue.destinationViewController as! FirstViewController
-            view. = yolo[indexPath.row]
+            view.rowSelect = indexPath.row
         }
-    }*/
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
