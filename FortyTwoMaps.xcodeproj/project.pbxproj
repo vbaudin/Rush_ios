@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C301E6E1C6FB63B005C9291 /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C301E6D1C6FB63B005C9291 /* loading_screen.png */; };
+		5C11CCD01C70C36300CDDF97 /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C11CCCF1C70C36300CDDF97 /* loading_screen.png */; };
 		5CC782291C6F42C6008E000B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC782281C6F42C6008E000B /* AppDelegate.swift */; };
 		5CC7822B1C6F42C6008E000B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7822A1C6F42C6008E000B /* FirstViewController.swift */; };
 		5CC7822D1C6F42C6008E000B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7822C1C6F42C6008E000B /* SecondViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C301E6D1C6FB63B005C9291 /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen.png; path = ../../loading_screen.png; sourceTree = "<group>"; };
+		5C11CCCF1C70C36300CDDF97 /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_screen.png; sourceTree = SOURCE_ROOT; };
 		5CC782251C6F42C6008E000B /* FortyTwoMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortyTwoMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC782281C6F42C6008E000B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CC7822A1C6F42C6008E000B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		5CC782271C6F42C6008E000B /* FortyTwoMaps */ = {
 			isa = PBXGroup;
 			children = (
-				5C301E6D1C6FB63B005C9291 /* loading_screen.png */,
+				5C11CCCF1C70C36300CDDF97 /* loading_screen.png */,
 				A64E1A411C6F9F790001A0E1 /* TableViewController.swift */,
 				5CC782281C6F42C6008E000B /* AppDelegate.swift */,
 				5CC7822A1C6F42C6008E000B /* FirstViewController.swift */,
@@ -243,7 +243,7 @@
 			files = (
 				5CC782351C6F42C6008E000B /* LaunchScreen.storyboard in Resources */,
 				5CC782321C6F42C6008E000B /* Assets.xcassets in Resources */,
-				5C301E6E1C6FB63B005C9291 /* loading_screen.png in Resources */,
+				5C11CCD01C70C36300CDDF97 /* loading_screen.png in Resources */,
 				5CC782301C6F42C6008E000B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = FortyTwoMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rush.app.FortyTwoMaps;
@@ -424,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = FortyTwoMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rush.app.FortyTwoMaps;

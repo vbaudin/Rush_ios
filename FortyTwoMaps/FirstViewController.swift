@@ -13,18 +13,19 @@ import CoreLocation
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var optionMap: UISegmentedControl!
     @IBOutlet weak var Map: MKMapView!
+    @IBOutlet weak var GeoButton: UIButton!
     
     var LocationManager = CLLocationManager()
+    var UpdateLoc = CLLocationCoordinate2D()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         LocationManager.delegate = self
         LocationManager.desiredAccuracy = kCLLocationAccuracyBest
-        LocationManager.requestWhenInUseAuthorization()
         LocationManager.requestAlwaysAuthorization()
         LocationManager.startUpdatingLocation()
-        Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 48.896821, longitude: 2.319774), CLLocationDistance(200), CLLocationDistance(1500)), animated: true)
+        Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 48.896522, longitude: 2.318515), CLLocationDistance(100), CLLocationDistance(400)), animated: true)
         let fortyTwo = MKPointAnnotation()
         fortyTwo.coordinate = CLLocationCoordinate2D(latitude: 48.896522, longitude: 2.318515)
         fortyTwo.title = "École 42"
@@ -48,13 +49,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    @IBAction func GeoCenter(sender: UIButton) {
+        Map.setRegion(MKCoordinateRegionMake(self.UpdateLoc, MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)), animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("coucou")
+        
+        self.UpdateLoc = locations[0].coordinate
     }
 
 }
