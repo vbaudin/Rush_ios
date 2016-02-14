@@ -123,13 +123,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ey-Ud-cNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.5" y="514.5"/>
+            <point key="canvasLocation" x="-191.5" y="514.5"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="WkK-Pg-jhG">
             <objects>
                 <navigationController id="ScU-xT-a63" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Top_Charts" id="AYI-W9-Klx"/>
+                    <tabBarItem key="tabBarItem" title="List" image="Top_Charts" id="AYI-W9-Klx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sdn-cz-huA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

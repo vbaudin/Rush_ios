@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    let yolo: [String] = ["first text", "yolo", "vicking"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +35,13 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return self.yolo.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Loc", forIndexPath: indexPath)
+        cell.textLabel?.text = yolo[indexPath.row]
 
         // Configure the cell...
 
