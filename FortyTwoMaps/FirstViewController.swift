@@ -18,6 +18,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var LocationManager = CLLocationManager()
     var UpdateLoc = CLLocationCoordinate2D()
     
+    /*let yolo: [cellClass] = [
+        cellClass(title: "Ecole 42", subtitle: "CyberCafe", latitude: 48.896831, longitude: 2.318766),
+        cellClass(title: "Maison de Vacance", subtitle: "Limonade et Rhum Coco", latitude: 43.329337, longitude: 5.098494)]*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,12 +29,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         LocationManager.desiredAccuracy = kCLLocationAccuracyBest
         LocationManager.requestAlwaysAuthorization()
         LocationManager.startUpdatingLocation()
-        Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 48.896522, longitude: 2.318515), CLLocationDistance(100), CLLocationDistance(400)), animated: true)
-        let fortyTwo = MKPointAnnotation()
-        fortyTwo.coordinate = CLLocationCoordinate2D(latitude: 48.896522, longitude: 2.318515)
-        fortyTwo.title = "École 42"
-        fortyTwo.subtitle = "96 Boulevard Bessières 75017 Paris"
-        Map.addAnnotation(fortyTwo)
+        Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 0, longitude: 0), CLLocationDistance(100), CLLocationDistance(400)), animated: true)
+        //let fortyTwo = MKPointAnnotation()
+        /*for item in yolo
+        {
+            fortyTwo.coordinate = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
+            fortyTwo.title = item.title
+            fortyTwo.subtitle = item.subtitle
+            Map.addAnnotation(fortyTwo)
+        }*/
         Map.showsUserLocation = true
     }
 
@@ -64,4 +71,3 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     }
 
 }
-
