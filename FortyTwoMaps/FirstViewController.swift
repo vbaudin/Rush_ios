@@ -8,20 +8,29 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var optionMap: UISegmentedControl!
     @IBOutlet weak var Map: MKMapView!
+    
+    var LocationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        LocationManager.delegate = self
+        LocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        LocationManager.requestWhenInUseAuthorization()
+        LocationManager.requestAlwaysAuthorization()
+        LocationManager.startUpdatingLocation()
         Map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 48.896821, longitude: 2.319774), CLLocationDistance(200), CLLocationDistance(1500)), animated: true)
         let fortyTwo = MKPointAnnotation()
-        fortyTwo.coordinate = CLLocationCoordinate2D(latitude: 48.896821, longitude: 2.319774)
-        fortyTwo.title = "42"
-        fortyTwo.subtitle = ""
+        fortyTwo.coordinate = CLLocationCoordinate2D(latitude: 48.896522, longitude: 2.318515)
+        fortyTwo.title = "École 42"
+        fortyTwo.subtitle = "96 Boulevard Bessières 75017 Paris"
         Map.addAnnotation(fortyTwo)
+        Map.showsUserLocation = true
     }
 
     @IBAction func changeEvent(sender: UISegmentedControl) {
@@ -35,7 +44,7 @@ class FirstViewController: UIViewController {
         case 2:
             Map.mapType = MKMapType.Standard
         default:
-            Map.mapType = MKMapType.Satellite
+            Map.mapType = MKMapType.Hybrid
         }
     }
 
@@ -44,6 +53,9 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("coucou")
+    }
 
 }
 

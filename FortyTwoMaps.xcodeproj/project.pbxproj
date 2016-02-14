@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C301E6E1C6FB63B005C9291 /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C301E6D1C6FB63B005C9291 /* loading_screen.png */; };
 		5CC782291C6F42C6008E000B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC782281C6F42C6008E000B /* AppDelegate.swift */; };
 		5CC7822B1C6F42C6008E000B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7822A1C6F42C6008E000B /* FirstViewController.swift */; };
 		5CC7822D1C6F42C6008E000B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7822C1C6F42C6008E000B /* SecondViewController.swift */; };
@@ -15,7 +16,6 @@
 		5CC782351C6F42C6008E000B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC782331C6F42C6008E000B /* LaunchScreen.storyboard */; };
 		5CC782401C6F42C6008E000B /* FortyTwoMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7823F1C6F42C6008E000B /* FortyTwoMapsTests.swift */; };
 		5CC7824B1C6F42C6008E000B /* FortyTwoMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7824A1C6F42C6008E000B /* FortyTwoMapsUITests.swift */; };
-		A64E1A361C6F69480001A0E1 /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = A64E1A351C6F69480001A0E1 /* loading_screen.png */; };
 		A64E1A3E1C6F97E50001A0E1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A3D1C6F97E50001A0E1 /* TableViewCell.swift */; };
 		A64E1A421C6F9F790001A0E1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A411C6F9F790001A0E1 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C301E6D1C6FB63B005C9291 /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen.png; path = ../../loading_screen.png; sourceTree = "<group>"; };
 		5CC782251C6F42C6008E000B /* FortyTwoMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortyTwoMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC782281C6F42C6008E000B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CC7822A1C6F42C6008E000B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		5CC782461C6F42C6008E000B /* FortyTwoMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortyTwoMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC7824A1C6F42C6008E000B /* FortyTwoMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyTwoMapsUITests.swift; sourceTree = "<group>"; };
 		5CC7824C1C6F42C6008E000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A64E1A351C6F69480001A0E1 /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen.png; path = ../../../Downloads/loading_screen.png; sourceTree = "<group>"; };
 		A64E1A3D1C6F97E50001A0E1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A64E1A411C6F9F790001A0E1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +105,8 @@
 		5CC782271C6F42C6008E000B /* FortyTwoMaps */ = {
 			isa = PBXGroup;
 			children = (
+				5C301E6D1C6FB63B005C9291 /* loading_screen.png */,
 				A64E1A411C6F9F790001A0E1 /* TableViewController.swift */,
-				A64E1A351C6F69480001A0E1 /* loading_screen.png */,
 				5CC782281C6F42C6008E000B /* AppDelegate.swift */,
 				5CC7822A1C6F42C6008E000B /* FirstViewController.swift */,
 				5CC7822C1C6F42C6008E000B /* SecondViewController.swift */,
@@ -243,7 +243,7 @@
 			files = (
 				5CC782351C6F42C6008E000B /* LaunchScreen.storyboard in Resources */,
 				5CC782321C6F42C6008E000B /* Assets.xcassets in Resources */,
-				A64E1A361C6F69480001A0E1 /* loading_screen.png in Resources */,
+				5C301E6E1C6FB63B005C9291 /* loading_screen.png in Resources */,
 				5CC782301C6F42C6008E000B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
